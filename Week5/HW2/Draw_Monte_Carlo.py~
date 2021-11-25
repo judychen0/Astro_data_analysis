@@ -1,0 +1,36 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import sys
+import os.path
+
+def my_plot_style():
+   
+    params = {'legend.fontsize': 20,
+             'axes.labelsize': 20,
+             'axes.titlesize':20,
+             'xtick.labelsize':16,
+             'ytick.labelsize':16,
+             'xtick.major.size':5,
+              'xtick.minor.size':2.5,
+             'ytick.major.size':5,
+              'ytick.minor.size':2.5,
+             'figure.facecolor':'w',
+             #'lines.linewidth' : 1.5,
+              'xtick.major.width':1.5,
+              'ytick.major.width':1.5,
+              'xtick.minor.width':1.5,
+              'ytick.minor.width':1.5,
+              'xtick.major.pad': 12,
+              'ytick.major.pad': 8,
+              'axes.linewidth':1.5,
+              'xtick.direction':'in',
+              'ytick.direction':'in',
+             'ytick.labelleft':True,
+              'text.usetex' : False,
+             'font.family': 'sans-serif'}
+  
+    plt.rcParams.update(params)
+
+open_path = "/home/jou/astro/sim_output_txt/"
+filename = "sim_nonparallel"
+full_filename = os.path.join(open_path, filename+".txt")

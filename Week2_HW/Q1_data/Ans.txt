@@ -1,0 +1,18 @@
+/************Q1************/
+a)plot
+b)They are point sources. Some of their colors are dim and tend to be violet, some are bright sky blue at the center with their outer part a little green. In general, they are blue.
+
+c)Most of their spectra have stong emission lines above the continum. By observing their emission lines, we found that some stars have redshifted emmission lines, such as Ly-alpha which normally has the wavelength 1216 angstroms and should be in ultraviolet region, but now appears on the visible spectum. Therefore, this is a dataset of quasars.
+
+d)
+
+
+/************Q3************/
+a)It is the SDSS transforms how the science works are being done in the astronomy. With data and tools accessible to more people who desire to be invovlved in the work, people starts to collaborate with experts of different kinds of skills rather than diving hard individually. As this trend spread among nations, it enriched the scientific fruit in the astronomy field.
+
+b)The measurement of weak lensing and baryon acoustic oscillation are results they did not wonder about. The observation of asteriods population is also accidental. SDSS even break the redshift measurement the writer and his collaborators set a decade ago, finding the high-redshifted quasars. Lastly, the brown dwarf image from SDSS surprised the astronomers and overturn the previous saying about brown dwarf desert.
+
+c)I think the cultivation in the early age education is really important, just as the writer's experience, it would later influence his attitude and intrest toward finding his career. For instance, he mentioned that he never regret doing mostly the instrumental work of SDSS rather than physics work. He is a good example of not conducting scientific work for others' praise.
+
+d)Hubble returns imaging data like a shortsighted man's view, some large fuzzy light spots, while the astronomers highly expected some clear, point-like star images. Then, they soon realized it was the manufacture problem of the primary mirror.
+

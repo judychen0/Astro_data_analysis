@@ -1,0 +1,45 @@
+import numpy as np
+import matplotlib.pyplot as plt
+import astropy.io.fits as pf
+import scipy.stats as ss
+
+
+def my_plot_style():
+   
+    params = {'legend.fontsize': 20,
+             'axes.labelsize': 20,
+             'axes.titlesize':20,
+             'xtick.labelsize':16,
+             'ytick.labelsize':16,
+             'xtick.major.size':5,
+              'xtick.minor.size':2.5,
+             'ytick.major.size':5,
+              'ytick.minor.size':2.5,
+             'figure.facecolor':'w',
+             #'lines.linewidth' : 1.5,
+              'xtick.major.width':1.5,
+              'ytick.major.width':1.5,
+              'xtick.minor.width':1.5,
+              'ytick.minor.width':1.5,
+              'xtick.major.pad': 12,
+              'ytick.major.pad': 8,
+              'axes.linewidth':1.5,
+              'xtick.direction':'in',
+              'ytick.direction':'in',
+             'ytick.labelleft':True,
+              'text.usetex' : False,
+             'font.family': 'sans-serif'}
+  
+    plt.rcParams.update(params)
+
+data = pf.open('SDSS_QSO_spectra_short.fits')
+spectra = data[0].data
+inv = data[1].data
+wavelength = data[2].data
+
+my_plot_style()
+
+plt.figure(figsize = (8, 8))
+mean = np.mean(spectra, axis=0)
+median = np.median(spectra, axis=0)
+sigma_clip = ss.sigma_clip()

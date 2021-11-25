@@ -1,0 +1,18 @@
+import numpy as np
+
+mu = 1
+sigma = 1
+
+var2 = np.zeros(100)
+theo_var2 = np.zeros(100)
+
+for ipoint in range(0, 100):
+    ndata = (ipoint+1)*100
+    simvar = np.zeros(ndata)
+
+    for isim in range(1, 1000):
+        randomdata = np.random.normal(mu, sigma, ndata)
+        simvar[isim] = np.var(randomdata)
+
+    var2.append(np.var(simvar))
+    theo_var2.append(2*pow(sigma, 4)/ndata)

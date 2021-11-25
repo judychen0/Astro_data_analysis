@@ -1,0 +1,22 @@
+import numpy as np
+import astropy.io.fits as pf
+import matplotlib.pyplot as plt
+import my_plot_style as mps
+import matplotlib.cm as cm
+import importlib
+import scipy.stats as ss
+from kapteyn import kmpfit
+
+data = pf.getdata('hubble_original_data.fits',1)
+x = data['distance']
+y = data['velocity']
+print("spearman correlation coeff. : "+str(ss.spearmanr(x,y)[0]))
+print("pearson correlation coeff. : "+str(ss.pearsonr(x,y)[0]))
+
+coeff = []
+for iboot in range(0, 1000):
+    rindex = np.random.randint(0, len(x), len(x))
+    coeff.append(ss.pearsonr(x[rindex], y[rindex])[0])
+
+uncertainty = np.std(coeff)
+print("uncertainty of bootstrap method for pearson coeff. : "+str(uncertainty))

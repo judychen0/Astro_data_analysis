@@ -1,0 +1,41 @@
+import numpy as np
+import sys
+
+mean = 0
+sigma  = 10
+
+isim = int(sys.argv)
+simvar = 0
+
+npoints = 50
+xaxis = np.zeros(npoints)
+var2 = np.zeros(npoints)
+theo_var2 = np.zeros(npoints)
+
+filename = "sim"+str(sys.argv)
+save_path = "/home/jou/astro/sim_output_txt"
+full_filename = os.path.join(save_path, filename+"_.txt")
+fp = open(full_filename, "w")
+
+for ipoint in range(0, npoints):
+    ndata = (ipoint+1)*1000
+    xaxis[ipoint] = ndata
+
+    randomdata = np.random.normal(mean, sigma, ndata)
+    simvar = np.var(randomdata)
+
+    var2[ipoint] = np.var(simvar)
+    theo_var2[ipoint] = 2*pow(sigma, 4)/ndata
+
+    write_array = []
+    write_array.append(var2[ipoint]+" "+theo_var2[ipoint]+"\n")
+    fp.writelines(write_array)
+
+fp.close()
+
+print(var2)
+print(theo_var2)
+
+
+
+

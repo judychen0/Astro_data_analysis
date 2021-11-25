@@ -1,0 +1,5 @@
+import os.path
+
+open_path = "/home/jou/astro/sim_output_txt"
+openfilename  = "sim_"+str(isim)
+full_openfilename = os.path.join(open_path, openfilename+".txt")

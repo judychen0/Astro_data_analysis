@@ -1,0 +1,25 @@
+import numpy as np
+import math
+
+nsim = 10000
+simstd = np.zeros(nsim)
+simmean = np.zeros(nsim)
+
+npoints = 50
+xaxis = np.zeros(npoints)
+std = np.zeros(npoints)
+mean = np.zeros(npoints)
+mean_precision = np.zeros(npoints)
+
+for ipoint in range(0, npoints):
+    ndata = (ipoint+1)*1000
+    xaxis[ipoint] = ndata
+
+    for isim in range(0, nsim):
+        randomdata = np.random.standard_cauchy(ndata)
+        #simstd[isim] = np.std(randomdata)
+        simmean[isim] = np.mean(randomdata)
+
+    #std[ipoint] = np.mean(simstd)
+    mean[ipoint] = np.mean(simmean)
+    mean_precision[ipoint] = mean[ipoint]/math.sqrt(ndata)

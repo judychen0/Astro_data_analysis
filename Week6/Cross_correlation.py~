@@ -1,0 +1,14 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+newdata = np.load("simple_correlation_100_x_y.npy")
+x = new_data[0,:]
+y = new_data[1,:]
+
+y_0 = np.where(x==0)
+y_1 = np.where(x==1)
+
+def y_mean(x, y, atx):
+    y_search = np.where(x==atx)
+    y_mean = np.mean(y[y_search[0]])
+    
